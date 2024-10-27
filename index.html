@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - booking page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Booking Page - MALIKU TAXI</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4; /* Light gray background */
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .car-types {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .car {
+            text-align: center;
+            margin: 10px;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            width: 200px; /* Set width for uniformity */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visual */
+        }
+
+        .car img {
+            width: 100%; /* Full width for car images */
+            height: auto;
+            border-radius: 5px; /* Rounded corners for images */
+        }
+
+        .car h3 {
+            margin-top: 10px;
+            color: #1E90FF; /* Change to a blue color for titles */
+        }
+
+        /* Button Styles */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .next-button, .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1E90FF; /* Light blue background */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .next-button[disabled] {
+            background-color: #ccc; /* Grey background when disabled */
+            cursor: not-allowed;
+        }
+
+        .back-button:hover {
+            background-color: #5CACEE; /* Lighter blue on hover */
+        }
+
+        /* Dropdown Styles */
+        .car-select {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Choose Your Ride</h1>
+
+    <section class="car-types">
+        <div class="car">
+            <h3>EECO</h3>
+            <img src="https://i.ibb.co/LPNYsLL/eeco.jpg" alt="EECO Car">
+            <p>A spacious <strong>7 SEATER</strong> vehicle suitable for family trips and longer journeys.</p>
+        </div>
+        <div class="car">
+            <h3>Ertiga</h3>
+            <img src="https://i.ibb.co/3ykVMDb/ertiga.jpg" alt="Ertiga Car">
+            <p>A spacious <strong>7 SEATER</strong> vehicle suitable for family trips and longer journeys.</p>
+        </div>
+        <div class="car">
+            <h3>Auto-Rickshaw</h3>
+            <img src="https://i.ibb.co/5sMC0T4/auto.jpg" alt="Auto-Rickshaw">
+            <p>An economical option for short trips within the city.</p>
+        </div>
+    </section>
+
+    <!-- Dropdown for Car Selection -->
+    <select id="car-select" class="car-select">
+        <option value="">Select a Car</option>
+        <option value="eeco">EECO</option>
+        <option value="ertiga">Ertiga</option>
+        <option value="auto-rickshaw">Auto-Rickshaw</option>
+    </select>
+
+    <!-- Button Container -->
+    <div class="button-container">
+        <!-- Next Button (Initially Disabled) -->
+        <a href="#" id="next-button" class="next-button" disabled>Next</a>
+        <!-- Back to Home Button -->
+        <a href="https://irfanmohdt.github.io/Maliku-Taxi.com/" class="back-button">Back to Home</a>
+    </div>
+
+    <!-- JavaScript for Enabling Next Button -->
+    <script>
+        const carSelect = document.getElementById('car-select');
+        const nextButton = document.getElementById('next-button');
+
+        // Enable the Next button when a car is selected
+        carSelect.addEventListener('change', function() {
+            if (carSelect.value) {
+                nextButton.removeAttribute('disabled');
+                nextButton.href = `https://irfanmohdt.github.io/date-selection/`; // Updated link
+            } else {
+                nextButton.setAttribute('disabled', 'true');
+                nextButton.removeAttribute('href');
+            }
+        });
+    </script>
+
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

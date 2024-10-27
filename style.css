@@ -1,0 +1,28 @@
+.booking-form {
+    padding: 20px;
+    text-align: center;
+}
+
+.booking-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.booking-form input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.booking-form button {
+    padding: 10px 20px;
+    background: #add8e6; /* Light blue background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background: #87ceeb; /* Lighter blue on hover */
+}
